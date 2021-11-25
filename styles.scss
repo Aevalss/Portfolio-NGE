@@ -1,4 +1,5 @@
 /* Обнуление */
+
 *,
 *::before,
 *::after {
@@ -48,6 +49,7 @@ body {
   }
 }
 // === Header=================================================
+
 .header__logo {
   display: flex;
   align-items: center;
@@ -90,6 +92,7 @@ body {
     align-items: center;
   }
 }
+// СТИЛЬ ССЫЛОК В МЕНЮ
 .underline-one {
   /* Цвет обычной ссылки */
   position: relative;
@@ -161,6 +164,38 @@ body {
     }
   }
 }
+// АДАПТИВНЫЕ ССЫЛКИ В МЕНЮ
+.header-media {
+  display: none;
+}
+.nav__list-mda {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and(max-width: 410px) {
+    justify-content: start;
+  }
+}
+.nav__item-mda:not(:last-child) {
+  padding-right: 50px;
+  @media screen and (max-width: 760px) {
+    padding-right: 1px;
+  }
+}
+@media screen and (max-width: 616px) {
+  .header-media {
+    display: block;
+    margin-top: -20px;
+    margin-bottom: 80px;
+  }
+  .nav__list {
+    display: none;
+  }
+  .header {
+    justify-content: space-between;
+  }
+}
+
 // ===Вторая часть сайта=================================================
 .page2 {
   display: flex;
